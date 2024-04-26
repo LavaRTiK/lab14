@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.OleDb;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -52,6 +54,27 @@ namespace lab14
             list.Add(new Festival("test", new DateTime(2001, 01, 23, 10, 30, 00), "Добрицький4", 110) { id = 5 });
 
             //new DataTime()с
+        }
+        public void SaveDBJson()
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true  };
+            string json = JsonSerializer.Serialize(list,options);
+            if (!File.Exists("SaveDB.json"))
+            {
+                File.Create("SaveDB.json");
+            }
+            File.WriteAllText("SaveDB.json",json);
+        }
+
+        public void LoadDBJson()
+        {
+            if (!File.Exists("SaveDB.json"))
+            {
+                return;
+            }
+            string json = File.ReadAllText("SaveDB.json");
+            var decod = JsonSerializer.Deserialize<List<Concert>>(json);
+            this.list = decod;
         }
         public List<Concert> GetList()
         {

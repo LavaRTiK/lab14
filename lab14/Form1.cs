@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +13,7 @@ namespace lab14
 {
     public partial class Form1 : Form
     {
+        private bool save = false;
         DB db = new DB();
         public Form1()
         {
@@ -21,7 +23,7 @@ namespace lab14
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = "lab 14";
-            db.CreateTestData();
+            //db.CreateTestData();
             Updated();
         }
         public void Updated()
@@ -109,6 +111,40 @@ namespace lab14
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             Updated(monthCalendar1.SelectionStart.ToShortDateString());
+        }
+
+        private void завантаженняToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            db.LoadDBJson();
+            Updated();
+        }
+
+        private void збереженняToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            db.SaveDBJson();
+        }
+
+        private void автозбереженняВиклToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(save == false)
+            {
+                save = true;
+                автозбереженняВиклToolStripMenuItem.Text = "Авто-збереженя вкл";
+            }
+            else
+            {
+                save = false;
+                автозбереженняВиклToolStripMenuItem.Text = "Авто-збереженя викл";
+
+            }
+        }
+
+        private void Form1_Deactivate(object sender, EventArgs e)
+        {
+            if(save == true)
+            {
+                db.SaveDBJson();
+            }
         }
     }
 }

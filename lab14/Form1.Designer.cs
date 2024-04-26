@@ -43,7 +43,13 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.buttonShowCalendar = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sADASDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.завантаженняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.збереженняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.автозбереженняВиклToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -60,10 +66,11 @@
             this.Number_of_Seats});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(13, 13);
+            this.listView1.Location = new System.Drawing.Point(9, 26);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(909, 469);
+            this.listView1.Size = new System.Drawing.Size(607, 310);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -100,9 +107,10 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(496, 495);
+            this.buttonAdd.Location = new System.Drawing.Point(331, 341);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(128, 42);
+            this.buttonAdd.Size = new System.Drawing.Size(85, 27);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -111,9 +119,10 @@
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemove.Location = new System.Drawing.Point(630, 494);
+            this.buttonRemove.Location = new System.Drawing.Point(420, 340);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(128, 42);
+            this.buttonRemove.Size = new System.Drawing.Size(85, 27);
             this.buttonRemove.TabIndex = 2;
             this.buttonRemove.Text = "Remove";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -122,9 +131,10 @@
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(764, 495);
+            this.buttonEdit.Location = new System.Drawing.Point(509, 341);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(142, 41);
+            this.buttonEdit.Size = new System.Drawing.Size(95, 27);
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -133,9 +143,10 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(13, 495);
+            this.button1.Location = new System.Drawing.Point(9, 341);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 41);
+            this.button1.Size = new System.Drawing.Size(68, 27);
             this.button1.TabIndex = 4;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
@@ -144,7 +155,8 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monthCalendar1.Location = new System.Drawing.Point(261, 282);
+            this.monthCalendar1.Location = new System.Drawing.Point(174, 202);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 5;
@@ -154,19 +166,61 @@
             // buttonShowCalendar
             // 
             this.buttonShowCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonShowCalendar.Location = new System.Drawing.Point(122, 494);
+            this.buttonShowCalendar.Location = new System.Drawing.Point(81, 340);
+            this.buttonShowCalendar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonShowCalendar.Name = "buttonShowCalendar";
-            this.buttonShowCalendar.Size = new System.Drawing.Size(136, 41);
+            this.buttonShowCalendar.Size = new System.Drawing.Size(91, 27);
             this.buttonShowCalendar.TabIndex = 6;
             this.buttonShowCalendar.Text = "Show Calendar";
             this.buttonShowCalendar.UseVisualStyleBackColor = true;
             this.buttonShowCalendar.Click += new System.EventHandler(this.buttonShowCalendar_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sADASDToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(627, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sADASDToolStripMenuItem
+            // 
+            this.sADASDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.завантаженняToolStripMenuItem,
+            this.збереженняToolStripMenuItem,
+            this.автозбереженняВиклToolStripMenuItem});
+            this.sADASDToolStripMenuItem.Name = "sADASDToolStripMenuItem";
+            this.sADASDToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.sADASDToolStripMenuItem.Text = "Json";
+            // 
+            // завантаженняToolStripMenuItem
+            // 
+            this.завантаженняToolStripMenuItem.Name = "завантаженняToolStripMenuItem";
+            this.завантаженняToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.завантаженняToolStripMenuItem.Text = "Завантаження";
+            this.завантаженняToolStripMenuItem.Click += new System.EventHandler(this.завантаженняToolStripMenuItem_Click);
+            // 
+            // збереженняToolStripMenuItem
+            // 
+            this.збереженняToolStripMenuItem.Name = "збереженняToolStripMenuItem";
+            this.збереженняToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.збереженняToolStripMenuItem.Text = "Збереження";
+            this.збереженняToolStripMenuItem.Click += new System.EventHandler(this.збереженняToolStripMenuItem_Click);
+            // 
+            // автозбереженняВиклToolStripMenuItem
+            // 
+            this.автозбереженняВиклToolStripMenuItem.Name = "автозбереженняВиклToolStripMenuItem";
+            this.автозбереженняВиклToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.автозбереженняВиклToolStripMenuItem.Text = "Авто-збереження викл";
+            this.автозбереженняВиклToolStripMenuItem.Click += new System.EventHandler(this.автозбереженняВиклToolStripMenuItem_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 549);
+            this.ClientSize = new System.Drawing.Size(627, 387);
             this.Controls.Add(this.buttonShowCalendar);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.button1);
@@ -174,11 +228,19 @@
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listView1);
-            this.MinimumSize = new System.Drawing.Size(956, 605);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(643, 407);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -198,6 +260,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button buttonShowCalendar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sADASDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem завантаженняToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem збереженняToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem автозбереженняВиклToolStripMenuItem;
     }
 }
 
