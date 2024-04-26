@@ -69,7 +69,12 @@ namespace lab14
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if(listView1.Items.Count > 0)
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Sleceted obj");
+                return;
+            }
+            if (listView1.Items.Count > 0)
             {
                 int id = Convert.ToInt32(listView1.SelectedItems[0].Text);
                 db.Removed(id);
