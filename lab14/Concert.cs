@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace lab14
 {
+    [JsonDerivedType(typeof(Concert), typeDiscriminator: "Concert")]
+    [JsonDerivedType(typeof(Festival), typeDiscriminator: "Festival")]
     public class Concert : Entity
     {
         public string name { get; set; }

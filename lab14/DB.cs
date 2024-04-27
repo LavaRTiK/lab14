@@ -52,13 +52,12 @@ namespace lab14
             list.Add(new Concert("test", new DateTime(2004, 02, 11, 11, 00, 00), "Добрицьки2й", 310) { id = 2 });
             list.Add(new Concert("test", new DateTime(2003, 04, 15, 10, 30, 00), "Добрицький3", 110) { id = 3 });
             list.Add(new Festival("test", new DateTime(2001, 01, 23, 10, 30, 00), "Добрицький4", 110) { id = 5 });
-
-            //new DataTime()с
+                //new DataTime()с
         }
         public void SaveDBJson()
         {
             var options = new JsonSerializerOptions { WriteIndented = true  };
-            string json = JsonSerializer.Serialize(list,options);
+            string json = JsonSerializer.Serialize<List<Concert>>(list,options);
             if (!File.Exists("SaveDB.json"))
             {
                 File.Create("SaveDB.json");
@@ -75,6 +74,9 @@ namespace lab14
             string json = File.ReadAllText("SaveDB.json");
             var decod = JsonSerializer.Deserialize<List<Concert>>(json);
             this.list = decod;
+            //MessageBox.Show((decod[0] is Concert).ToString());
+            //MessageBox.Show((decod[1] is Festival).ToString());
+            MessageBox.Show($"{(list[0] is Concert).ToString()} == Conccert \n  {(list[1] is Festival).ToString()} == Fectefal");
         }
         public List<Concert> GetList()
         {

@@ -60,7 +60,16 @@ namespace lab14
             if(fromadd.ShowDialog() == DialogResult.OK)
             {
                 var inst = fromadd.ReturnObj();
-                db.Add(inst);
+                var fest = fromadd.ReturnObjf();
+
+                if(inst == null)
+                {
+                    db.Add(fest);
+                }
+                else
+                {
+                    db.Add(inst);
+                }
             }
             Updated();
             

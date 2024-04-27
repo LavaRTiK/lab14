@@ -19,6 +19,7 @@ namespace lab14
         }
 
         private Concert inst = null;
+        private Festival festival = null;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,8 +36,8 @@ namespace lab14
             else if (radioButtonFestival.Checked)
             {
                 var data = Convert.ToDateTime(dateTimePicker1.Value.Date + dateTimePicker1.Value.TimeOfDay);
-                inst = new Festival(textBox1.Text, data, textBox3.Text, Convert.ToInt32(textBox4.Text));
-                MessageBox.Show(inst.ToString());
+                festival = new Festival(textBox1.Text, data, textBox3.Text, Convert.ToInt32(textBox4.Text));
+                MessageBox.Show((festival is Festival).ToString());
                 DialogResult = DialogResult.OK;
             }
             else
@@ -62,6 +63,10 @@ namespace lab14
         public Concert ReturnObj()
         {
             return inst;
+        }
+        public Festival ReturnObjf()
+        {
+            return festival;
         }
         private bool ValidatingCheck()
         {
